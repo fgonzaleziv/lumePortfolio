@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="canonical" href={{ page.url | url | absoluteUrl(site.url) }}>
-
-    {% bundledcss %}
+    <link rel="canonical" href={{ page.url | url }}>
+{# 
+    {% bundledcss %} #}
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
@@ -45,8 +45,8 @@
       {% set socialImage = site.defaultSocialImage %}
     {% endif %}
     {% if socialImage %}
-      <meta property="og:image" content="{{ socialImage | url | absoluteUrl(site.url) }}"/>
-      <meta name="twitter:image" content="{{ socialImage | url | absoluteUrl(site.url) }}"/>
+      <meta property="og:image" content="{{ socialImage | url }}"/>
+      <meta name="twitter:image" content="{{ socialImage | url }}"/>
     {% endif %}
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RH0QSFHB54"></script>
     <script>
@@ -144,7 +144,7 @@
       </div>
 
     </footer>
-
-    {% bundledjs %}
+{# 
+    {% bundledjs %} #}
   </body>
 </html>
